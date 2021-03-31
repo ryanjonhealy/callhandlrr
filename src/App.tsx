@@ -1,10 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import { Customer, Status, Call, Stats, Application } from "./objects";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+import logo from "./logo.svg";
+import "./App.css";
+import React, { Component } from "react";
+
+import { services } from "./services";
+
+export interface appstate {
+  Customers: Customer[];
+
+  Calls: Call[];
+}
+
+export default class App extends Component {
+  private services: services = new services();
+
+  state = {
+    Customers: [],
+  };
+
+  async componentDidMount() {
+    await this.services.getAllCustomers().then((data) => {
+      console.log("🚀 ~ data", data);
+
+      this.setState({ Customers: data });
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        
+        {this.state.Customers ? (
+          this.state.Customers.map((item, index) => {
+          console.log('🚀 ~ item', item);
+
+            
+            let name
+            if(item){
+              name = item["name"];
+            }else{
+              name =null;
+            }
+
+            return <div>{name}</div>;
+          })
+        ) : (
+          <div></div>
+        )}
+
+
+        
+        {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +64,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
+      </header> */}
+      </div>
+    );
+  }
 }
-
-export default App;
