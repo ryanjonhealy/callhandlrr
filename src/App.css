@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin:30px;
 }
 
 .App-logo {
@@ -26,6 +27,29 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Customer{
+  margin: 10px auto;
+  padding: 30px 20px;
+  /* display: flex; */
+  justify-content: space-between;
+  -webkit-box-shadow: 5px 5px 21px 5px #000000;
+  box-shadow: 5px 5px 21px 5px #d6d6d6;
+  /* border:1px red solid; */
+
+}
+.customerName{
+  flex-basis: 1;
+}
+.actionButtons{
+  margin:0px 20px;
+}
+
+.Tablehost{
+
+  border: #61dafb 1px solid;
+  display: block;
 }
 
 @keyframes App-logo-spin {

@@ -5,6 +5,7 @@ import "./App.css";
 import React, { Component } from "react";
 
 import { services } from "./services";
+import CustomerComponent from "./customer";
 
 export interface appstate {
   Customers: Customer[];
@@ -30,27 +31,31 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        
         {this.state.Customers ? (
           this.state.Customers.map((item, index) => {
-          console.log('🚀 ~ item', item);
+            console.log("🚀 ~ item", item);
 
-            
-            let name
-            if(item){
+            let name;
+            if (item) {
               name = item["name"];
-            }else{
-              name =null;
+            } else {
+              name = null;
             }
 
-            return <div>{name}</div>;
+            return (
+              <div>
+                {/* <div>{name}</div> */}
+
+                <CustomerComponent
+                  Customer={item}
+                ></CustomerComponent>
+              </div>
+            );
           })
         ) : (
           <div></div>
         )}
 
-
-        
         {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
