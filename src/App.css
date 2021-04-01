@@ -45,6 +45,10 @@
 .actionButtons{
   margin:0px 20px;
 }
+.actionButtons button{
+  margin:10px;
+  
+}
 
 .Tablehost{
 
