@@ -1,22 +1,31 @@
 {
   "files": {
-    "main.css": "/callhandlrr/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/callhandlrr/static/js/main.20b27450.chunk.js",
-    "main.js.map": "/callhandlrr/static/js/main.20b27450.chunk.js.map",
-    "runtime-main.js": "/callhandlrr/static/js/runtime-main.40d2b44b.js",
-    "runtime-main.js.map": "/callhandlrr/static/js/runtime-main.40d2b44b.js.map",
-    "static/js/2.7c83c06a.chunk.js": "/callhandlrr/static/js/2.7c83c06a.chunk.js",
-    "static/js/2.7c83c06a.chunk.js.map": "/callhandlrr/static/js/2.7c83c06a.chunk.js.map",
-    "static/js/3.2267beca.chunk.js": "/callhandlrr/static/js/3.2267beca.chunk.js",
-    "static/js/3.2267beca.chunk.js.map": "/callhandlrr/static/js/3.2267beca.chunk.js.map",
+    "main.css": "/callhandlrr/static/css/main.2f6b69e6.chunk.css",
+    "main.js": "/callhandlrr/static/js/main.b044685c.chunk.js",
+    "main.js.map": "/callhandlrr/static/js/main.b044685c.chunk.js.map",
+    "runtime-main.js": "/callhandlrr/static/js/runtime-main.bc5abf72.js",
+    "runtime-main.js.map": "/callhandlrr/static/js/runtime-main.bc5abf72.js.map",
+    "static/js/2.9f5afc73.chunk.js": "/callhandlrr/static/js/2.9f5afc73.chunk.js",
+    "static/js/2.9f5afc73.chunk.js.map": "/callhandlrr/static/js/2.9f5afc73.chunk.js.map",
+    "static/js/3.9348587c.chunk.js": "/callhandlrr/static/js/3.9348587c.chunk.js",
+    "static/js/3.9348587c.chunk.js.map": "/callhandlrr/static/js/3.9348587c.chunk.js.map",
+    "static/js/4.eda7ba3b.chunk.js": "/callhandlrr/static/js/4.eda7ba3b.chunk.js",
+    "static/js/4.eda7ba3b.chunk.js.map": "/callhandlrr/static/js/4.eda7ba3b.chunk.js.map",
+    "static/js/5.185d396b.chunk.js": "/callhandlrr/static/js/5.185d396b.chunk.js",
+    "static/js/5.185d396b.chunk.js.map": "/callhandlrr/static/js/5.185d396b.chunk.js.map",
+    "static/js/6.da8ce0dc.chunk.js": "/callhandlrr/static/js/6.da8ce0dc.chunk.js",
+    "static/js/6.da8ce0dc.chunk.js.map": "/callhandlrr/static/js/6.da8ce0dc.chunk.js.map",
     "index.html": "/callhandlrr/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/callhandlrr/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.7c83c06a.chunk.js.LICENSE.txt": "/callhandlrr/static/js/2.7c83c06a.chunk.js.LICENSE.txt"
+    "static/css/main.2f6b69e6.chunk.css.map": "/callhandlrr/static/css/main.2f6b69e6.chunk.css.map",
+    "static/js/2.9f5afc73.chunk.js.LICENSE.txt": "/callhandlrr/static/js/2.9f5afc73.chunk.js.LICENSE.txt",
+    "static/js/3.9348587c.chunk.js.LICENSE.txt": "/callhandlrr/static/js/3.9348587c.chunk.js.LICENSE.txt",
+    "static/js/4.eda7ba3b.chunk.js.LICENSE.txt": "/callhandlrr/static/js/4.eda7ba3b.chunk.js.LICENSE.txt",
+    "static/js/5.185d396b.chunk.js.LICENSE.txt": "/callhandlrr/static/js/5.185d396b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.40d2b44b.js",
-    "static/js/2.7c83c06a.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.20b27450.chunk.js"
+    "static/js/runtime-main.bc5abf72.js",
+    "static/js/3.9348587c.chunk.js",
+    "static/css/main.2f6b69e6.chunk.css",
+    "static/js/main.b044685c.chunk.js"
   ]
 }
