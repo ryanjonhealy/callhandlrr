@@ -13,6 +13,8 @@ export interface appstate {
   Calls: Call[];
 }
 
+
+//Show Customer Name
 export default class App extends Component {
   private services: services = new services();
 
@@ -22,7 +24,7 @@ export default class App extends Component {
 
   async componentDidMount() {
     await this.services.getAllCustomers().then((data) => {
-      console.log("🚀 ~ data", data);
+      
 
       this.setState({ Customers: data });
     });
@@ -33,19 +35,9 @@ export default class App extends Component {
       <div className="App">
         {this.state.Customers ? (
           this.state.Customers.map((item, index) => {
-            console.log("🚀 ~ item", item);
-
-            let name;
-            if (item) {
-              name = item["name"];
-            } else {
-              name = null;
-            }
 
             return (
               <div>
-                {/* <div>{name}</div> */}
-
                 <CustomerComponent
                   Customer={item}
                 ></CustomerComponent>
@@ -56,20 +48,6 @@ export default class App extends Component {
           <div></div>
         )}
 
-        {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
       </div>
     );
   }

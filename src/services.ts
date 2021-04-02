@@ -1,5 +1,3 @@
-import fetchJsonp from "fetch-jsonp";
-import { Customer, Status, Call, Stats, Application } from "./objects";
 
 export class services {
   public async getAllCustomers(): Promise<any> {
@@ -10,13 +8,9 @@ export class services {
 
     return await fetch(
       "http://localhost:8010/proxy/api/Customer"
+            //production URL
       // "https://techtestcalllogapi.azurewebsites.net/api/Customer"
-      //,  { mode: "cors" }
-      //   headers: {
-      //     "Access-Control-Allow-Origin": '*',
-      //    "Content-Type": "application/json"
-      //    }
-      // }
+    
     )
       .then((res) => res.json())
       .then((data) => {
@@ -47,18 +41,13 @@ export class services {
   }
 
   public async getCustomerCalls(customerId?: string): Promise<any> {
-    let data;
-    let test;
+    
     //
-    return await fetch(
+    return await fetch(    
       "http://localhost:8010/proxy/api/Call/customer/" + customerId
+           //production URL
       // "https://techtestcalllogapi.azurewebsites.net/api/Customer"
-      //,  { mode: "cors" }
-      //   headers: {
-      //     "Access-Control-Allow-Origin": '*',
-      //    "Content-Type": "application/json"
-      //    }
-      // }
+     
     )
       .then((res) => res.json())
       .then((data) => {
@@ -77,13 +66,8 @@ export class services {
     //
     return await fetch(
       "http://localhost:8010/proxy/api/Statistics/" + customerId
+            //production URL
       // "https://techtestcalllogapi.azurewebsites.net/api/Customer"
-      //,  { mode: "cors" }
-      //   headers: {
-      //     "Access-Control-Allow-Origin": '*',
-      //    "Content-Type": "application/json"
-      //    }
-      // }
     )
       .then((res) => res.json())
       .then((data) => {
@@ -102,13 +86,9 @@ export class services {
     //
     return await fetch(
       "http://localhost:8010/proxy/api/Application/customer/" + customerId
+      //production URL
       // "https://techtestcalllogapi.azurewebsites.net/api/Customer"
-      //,  { mode: "cors" }
-      //   headers: {
-      //     "Access-Control-Allow-Origin": '*',
-      //    "Content-Type": "application/json"
-      //    }
-      // }
+   
     )
       .then((res) => res.json())
       .then((data) => {
@@ -121,35 +101,34 @@ export class services {
       });
   }
 
-
-
-
-  public async updateCustomerApps(name?: string, hasSupportContract?: string, description?: string ,customerId?: string): Promise<any> {
-    
+  public async updateCustomerApps(
+    name?: string,
+    hasSupportContract?: string,
+    description?: string,
+    customerId?: string
+  ): Promise<any> {
     let test;
     //
 
-
-    let data ={
-      "name": name,
-      "description": description,
-      "hasSupportContract": hasSupportContract,
-      "customerId": customerId
-    }
-
+    let data = {
+      name: name,
+      description: description,
+      hasSupportContract: hasSupportContract,
+      customerId: customerId,
+    };
 
     return await fetch(
       "http://localhost:8010/proxy/api/Application/customer/" + customerId,
-      {
       //"https://techtestcalllogapi.azurewebsites.net/api/Customer"
-      //,  { mode: "cors" }
+      {
+    
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-         },
-         method: 'patch',                                                              
-         body: JSON.stringify(  data )  
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
+        method: "patch",
+        body: JSON.stringify(data),
+      }
     )
       .then((res) => res.json())
       .then((data) => {
@@ -161,10 +140,6 @@ export class services {
         console.log(error);
       });
   }
-
-
-
-
 
   public async UpdateCall(data: any): Promise<any> {
     let id = data.id;
